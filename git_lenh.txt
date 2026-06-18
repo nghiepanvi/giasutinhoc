@@ -1,0 +1,3 @@
+git add .
+git commit -m "Nội dung bạn đã thay đổi"
+git push
