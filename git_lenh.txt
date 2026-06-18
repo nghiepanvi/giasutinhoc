@@ -1,4 +1,3 @@
 git add .
-git commit -m "ghi chu bat ky o day"
-git pull origin main --rebase           (làm nếu cần đồng bộ không thi thôi)
+git commit -m "doi ten file"
 git push
