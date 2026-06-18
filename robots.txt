@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giasutinhoc.id.vn/sitemap.xml
