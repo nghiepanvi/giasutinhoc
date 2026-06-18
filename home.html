@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gia Sư Toán</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>GIA SƯ CÁC MÔN HỌC FUNIX</h1>
+            <p>Học chắc kiến thức - Tiến bộ vượt trội</p>
+        </div>
+    </section>
+
+    <!-- Nội dung -->
+    <div class="container">
+        <div class="section">
+            <!-- Giới thiệu -->
+            <div class="info">
+                <h2>Vì sao chọn gia sư tại Funix?</h2>
+
+                <ul>
+                    <li>
+                        <strong>1 Kèm 1 Hiệu Quả</strong>
+                        Lộ trình cá nhân hóa theo năng lực học sinh. Ôn tập củng cố kiến
+                        thức học sinh mất gốc. Bồi dưỡng phát triển năng lực học sinh
+                        giỏi.
+                    </li>
+
+                    <li>
+                        <strong>Nắm Chắc Kiến Thức</strong>
+                        Gia sư là giáo viên có kinh nghiệm. Giảng dạy dễ hiểu, bám sát
+                        chương trình.
+                    </li>
+
+                    <li>
+                        <strong>Luyện Thi Hiệu Quả</strong>
+                        Ôn tập giữa kỳ, cuối kỳ, thi chuyển cấp.
+                    </li>
+
+                    <li>
+                        <strong>Linh Hoạt</strong>
+                        Học online thời gian linh hoạt, học thử miễn phí.
+                    </li>
+                    <li>
+                        <strong>Linh Hoạt</strong>
+                        Học phí chỉ từ 109k/ buổi.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Form đăng ký -->
+            <div class="form-box">
+                <h3>ĐĂNG KÝ TƯ VẤN</h3>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label>Tên học sinh</label>
+                        <input type="text" id="studentName" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lớp học hiện tại</label>
+                        <div class="form-group">
+                            <select id="className" required>
+                                <option value="">-- Chọn lớp --</option>
+                                <option>Lớp 1</option>
+                                <option>Lớp 2</option>
+                                <option>Lớp 3</option>
+                                <option>Lớp 4</option>
+                                <option>Lớp 5</option>
+                                <option>Lớp 6</option>
+                                <option>Lớp 7</option>
+                                <option>Lớp 8</option>
+                                <option>Lớp 9</option>
+                                <option>Lớp 10</option>
+                                <option>Lớp 11</option>
+                                <option>Lớp 12</option>
+                                <option>Đại học</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số điện thoại phụ huynh</label>
+                        <input type="tel" id="phone" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Môn học muốn học</label>
+                        <select id="subject">
+                            <option value="">-- Chọn môn học --</option>
+                            <option>Gia sư môn Toán phổ thông</option>
+                            <option>Toán logic,Toán nâng cao, Toán tin M1, M2</option>
+                            <option>Ôn thi tốt nghiệp</option>
+                            <option>Gia sư các môn đại học</option>
+                            <option>Gia sư môn Văn</option>
+                            <option>Gia sư môn Tin học - Lập trình</option>
+                            <option>Luyện thi học sinh giỏi tin- Tin học trẻ</option>
+                            <option>Gia sư Tiếng Anh</option>
+                            <option>Gia sư môn Lý</option>
+                            <option>Gia sư môn Sinh</option>
+                            <option>Gia sư lập trình Scratch</option>
+                            <option>Gia sư lập trình Python</option>
+                            <option>Gia sư lập trình C++</option>
+                            <option>Gia sư các môn khác (viết mô tả kèm theo)</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mô tả thêm về môn cần học hoặc yêu cầu về gia sư</label>
+                        <textarea id="note"></textarea>
+                    </div>
+
+                    <button type="submit">ĐĂNG KÝ NGAY</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Liên hệ -->
+
+    <div class="contact-fixed">
+
+        <a class="zalo-btn" href="https://zalo.me/0397009419" target="_blank">
+            <img src="images/zalo.png" alt="Zalo">
+        </a>
+
+        <a class="messenger-btn" href="https://m.me/ethantrannghiep" target="_blank">
+            <img src="images/message.png" alt="Messenger">
+        </a>
+
+    </div>
+    </div>
+
+    <div class="footer">Email: nghieptt@funix.edu.vn</div>
+
+    <script>
+        document
+            .getElementById("registerForm")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let name = document.getElementById("studentName").value;
+
+                let lop = document.getElementById("className").value;
+
+                let phone = document.getElementById("phone").value;
+
+                let subject = document.getElementById("subject").value;
+
+                alert(
+                    "Đăng ký thành công!\n\n" +
+                    "Học sinh: " +
+                    name +
+                    "\n" +
+                    "Lớp: " +
+                    lop +
+                    "\n" +
+                    "SĐT PH: " +
+                    phone +
+                    "\n" +
+                    "Môn học: " +
+                    subject,
+                );
+            });
+    </script>
+</body>
+
+</html>

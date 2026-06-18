@@ -1,0 +1,198 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#eef5ff,#dfeeff);
+    color:#1d3557;
+}
+
+/* Banner */
+.banner{
+    width:100%;
+    height:500px;
+    background:url("https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600") center/cover;
+    position:relative;
+}
+
+.banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.banner-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.banner-content p{
+    font-size:24px;
+}
+
+/* Main section */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.section{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.info{
+    flex:1;
+    min-width:320px;
+}
+
+.info h2{
+    font-size:42px;
+    color:#0056d6;
+    margin-bottom:20px;
+}
+
+.info ul{
+    list-style:none;
+}
+
+.info li{
+    background:white;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info li strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+/* Form */
+.form-box{
+    flex:1;
+    min-width:350px;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.form-box h3{
+    text-align:center;
+    font-size:32px;
+    color:#0056d6;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d0d0d0;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#0056d6;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#003f9f;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+}
+
+@media(max-width:768px){
+    .banner-content h1{
+        font-size:40px;
+    }
+
+    .banner-content p{
+        font-size:18px;
+    }
+}
+.footer{
+    text-align:center;
+    padding:30px;
+    background:#0047AB; /* Xanh coban */
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    width:100%;
+    margin-top:40px;
+}
+.contact-fixed{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+}
+
+.contact-fixed a{
+    width:60px;
+    height:60px;
+    display:block;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+.contact-fixed a img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
