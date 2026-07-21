@@ -1,4 +1,3 @@
-
 *{
     margin:0;
     padding:0;
@@ -7,14 +6,15 @@
 }
 
 body{
-    background:linear-gradient(135deg,#eef5ff,#dfeeff);
+    background:#fff;
     color:#1d3557;
 }
 
 /* Banner */
 .banner{
-   width:100%;
-    height:500px;
+    width:100%;
+    height:100vh;
+    min-height:500px;
     background:url("images/banner.PNG") center center;
     background-size:cover;
     position:relative;
@@ -35,142 +35,15 @@ body{
     text-align:center;
     color:white;
     width:90%;
+    z-index:1;
 }
 
 .banner-content h1{
     font-size:50px;
-    margin-bottom:15px;
+    line-height:1.4;
 }
 
-.banner-content p{
-    font-size:24px;
-}
-
-/* Main section */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.section{
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.info{
-    flex:1;
-    min-width:320px;
-}
-
-.info h2{
-    font-size:42px;
-    color:#0056d6;
-    margin-bottom:20px;
-}
-
-.info ul{
-    list-style:none;
-}
-
-.info li{
-    background:white;
-    margin-bottom:15px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-.info li strong{
-    display:block;
-    margin-bottom:5px;
-}
-
-/* Form */
-.form-box{
-    flex:1;
-    min-width:350px;
-    background:white;
-    padding:35px;
-    border-radius:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.12);
-}
-
-.form-box h3{
-    text-align:center;
-    font-size:32px;
-    color:#0056d6;
-    margin-bottom:25px;
-}
-
-.form-group{
-    margin-bottom:18px;
-}
-
-label{
-    display:block;
-    margin-bottom:6px;
-    font-weight:bold;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:14px;
-    border:1px solid #d0d0d0;
-    border-radius:10px;
-    font-size:16px;
-}
-
-textarea{
-    resize:none;
-    height:120px;
-}
-
-button{
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#0056d6;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#003f9f;
-}
-
-/* Footer */
-.footer{
-    text-align:center;
-    padding:30px;
-    color:#666;
-}
-
-@media(max-width:768px){
-    .banner-content h1{
-        font-size:40px;
-    }
-
-    .banner-content p{
-        font-size:18px;
-    }
-}
-.footer{
-    text-align:center;
-    padding:30px;
-    background:#0047AB; /* Xanh coban */
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    width:100%;
-    margin-top:40px;
-}
+/* Nút liên hệ */
 .contact-fixed{
     position:fixed;
     right:20px;
@@ -178,7 +51,7 @@ button:hover{
     transform:translateY(-50%);
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:12px;
     z-index:999;
 }
 
@@ -189,72 +62,258 @@ button:hover{
     border-radius:50%;
     overflow:hidden;
     box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:0.3s;
 }
 
-.contact-fixed a img{
+.contact-fixed a:hover{
+    transform:scale(1.1);
+}
+
+.contact-fixed img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:#0047AB;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .banner{
+        height:100vh;
+    }
+
+    .banner-content h1{
+        font-size:32px;
+    }
+
+    .contact-fixed a{
+        width:50px;
+        height:50px;
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f7f9fc;
+    color:#1d3557;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner{
+    width:100%;
+    height:600px;
+    background:url("images/banner.PNG") center center;
+    background-size:cover;
+    position:relative;
+}
+
+.banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+    z-index:2;
+}
+
+.banner-content h1{
+    font-size:48px;
+    line-height:1.4;
+    margin-bottom:20px;
+}
+
+.banner-content p{
+    font-size:24px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:70px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#0056d6;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    border-top:4px solid #0056d6;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:#0056d6;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#444;
+    line-height:1.7;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   NÚT LIÊN HỆ NỔI
+========================= */
+
+.contact-fixed{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:999;
+}
+
+.contact-fixed a{
+    width:60px;
+    height:60px;
+    display:block;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.contact-fixed a:hover{
+    transform:scale(1.1);
+}
+
+.contact-fixed img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
 }
-* Cấu hình khung chứa lớn bên ngoài */
-  .seo-content {
-    display: flex;
-    gap: 20px; /* Khoảng cách giữa các ô vuông */
-    justify-content: center;
-    flex-wrap: wrap; /* Tự động xuống dòng nếu màn hình nhỏ (Responsive) */
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
 
-  /* Cấu hình chi tiết cho từng ô vuông (Card) */
- .seo-content {
-    display: grid;
-    /* Chia làm 3 cột bằng nhau, mỗi cột chiếm 1 phần (1fr) */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 24px; /* Khoảng cách giữa các ô vuông */
-    max-width: 1100px; /* Chiều rộng tối đa của cả khối để cân đối màn hình */
-    margin: 0 auto; /* Căn giữa toàn bộ khối ra giữa màn hình */
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+/* =========================
+   FOOTER
+========================= */
 
-  /* Cấu hình chi tiết cho từng ô vuông (Card) */
-  .card-item {
-    border: 3px solid #1a479a; /* Viền màu xanh đậm giống ảnh mẫu */
-    border-radius: 15px; /* Bo tròn các góc */
-    padding: 25px 20px;
-    text-align: center; /* Căn giữa toàn bộ chữ */
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
-    display: flex;
-    flex-direction: column;
-  }
+.footer{
+    text-align:center;
+    padding:25px;
+    background:#0047AB;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:40px;
+}
 
-  /* Định dạng tiêu đề H2 */
-  .card-item h2 {
-    color: #1a479a; /* Màu chữ xanh đồng bộ với viền */
-    font-size: 19px;
-    text-transform: uppercase; /* Viết hoa toàn bộ giống mẫu */
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.4;
-    min-height: 54px; /* Giữ cho các tiêu đề có độ cao bằng nhau */
-  }
+/* =========================
+   MOBILE
+========================= */
 
-  /* Định dạng đoạn văn P */
-  .card-item p {
-    color: #555555; /* Màu chữ xám vừa phải cho dễ đọc */
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-    text-align: justify; /* Căn đều hai bên giống như trong ảnh mẫu */
-  }
+@media(max-width:768px){
 
-  /* Cấu hình Responsive: Tự động chuyển thành 1 cột dọc khi xem trên điện thoại */
-  @media (max-width: 768px) {
-    .seo-content {
-      grid-template-columns: 1fr;
+    .banner{
+        height:500px;
     }
-  }
+
+    .banner-content h1{
+        font-size:30px;
+    }
+
+    .banner-content p{
+        font-size:18px;
+    }
+
+    .section{
+        padding:50px 15px;
+    }
+
+    .section h2{
+        font-size:28px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card h3{
+        font-size:22px;
+    }
+
+    .register{
+        margin:30px 15px;
+        padding:25px;
+    }
+
+    .register h2{
+        font-size:28px;
+    }
+
+    .contact-fixed a{
+        width:50px;
+        height:50px;
+    }
+}
